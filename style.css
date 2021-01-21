@@ -106,6 +106,7 @@ body {
 }
 
 .promo {
+  min-height: 148px;
   position: relative;
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px);
@@ -159,7 +160,7 @@ body {
   right: 0;
   top: 0;
   padding: 16px 32px;
-  height: 100%;
+  min-height: 763px;
   position: absolute;
   background: #FFFFFF;
   -webkit-box-sizing: border-box;
