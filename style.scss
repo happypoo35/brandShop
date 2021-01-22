@@ -570,16 +570,88 @@ body {
         grid-template-columns: 360px 2fr;
 
         .filter {
-            
-            > li {
-                font-weight: 600;
-                text-transform: uppercase;
+            position: relative;
+            font-weight: 600;
 
-                span {
-                    cursor: pointer;                    
+            .filter-box {
+                padding-right: 15px;
+                position: absolute;
+                top: -13px;
+                left: 0;
+                width: 100%;
+                padding-top: 13px;
+                box-sizing: border-box;                
+                transition: .3s ease;
+                z-index: 1;
+
+                .button {
+                    text-transform: uppercase;
                 }
             }
 
+            .filter-box.show {
+                padding-left: 16px;
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                background-color: #FFFFFF;
+            }
+
+            .filter-content {
+
+                .category-title {
+                    border-left: 5px solid $brandColor;
+                    min-height: 37px;
+                    margin-top: 16px;
+                    margin-bottom: 24px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    text-transform: uppercase;
+
+                    h3 {
+                        padding-left: 10px;
+                        padding-bottom: 10px;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #6F6E6E;
+                    }
+
+                    hr {
+                        width: 100%;                          
+                        border: none;
+                        height: 1px;
+                        color:#EBEBEB; 
+                        background-color: #EBEBEB;                       
+                    }
+                }
+
+                .category-title.active h3 {
+                    color: $brandColor;
+                }
+
+                .categories {
+                    padding-left: 16px;
+
+                    ul li {
+                        padding-bottom: 10px;
+
+                        a {
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 17px;
+
+                            color: #6F6E6E;                            
+                        }
+                    }
+                }
+
+            }
+
+            span {
+                cursor: pointer;                    
+            }
         }
 
         .sort {
