@@ -17,3 +17,10 @@ promoMenuCloseBtn.addEventListener('click', e => {
     promoMenu.classList.remove('show');
     promoOverlay.classList.remove('show');
 });
+
+promoOverlay.addEventListener('click', e => {
+    e.preventDefault();
+
+    promoMenu.classList.remove('show');
+    promoOverlay.classList.remove('show');    
+})
