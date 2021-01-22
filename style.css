@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
-.promo-overlay, .products-item-overlay, .products-button a, .products-filters .ff-icon, .products-filters .sort-icon, .subscribe-form-submit, .footer-socials-icon {
+.promo-overlay, .products-item-overlay, .products-button a, .products-filters .filter .filter-box .button, .products-filters .filter .filter-box .button .ff-icon, .products-filters .sort-icon, .subscribe-form-submit, .footer-socials-icon {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -616,11 +616,35 @@ a:hover .products-item-cart {
   text-transform: uppercase;
 }
 
+.products-filters .filter .filter-box .button .filter-icon {
+  margin-left: 11px;
+}
+
+.products-filters .filter .filter-box .button .ff-icon {
+  fill: #000000;
+}
+
 .products-filters .filter .filter-box.show {
   padding-left: 16px;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   background-color: #FFFFFF;
+}
+
+.products-filters .filter .filter-box.show .button {
+  color: #F16D7F;
+}
+
+.products-filters .filter .filter-box.show .button .filter-icon svg path {
+  fill: #F16D7F;
+}
+
+.products-filters .filter .filter-box.show .filter-content {
+  visibility: visible;
+}
+
+.products-filters .filter .filter-content {
+  visibility: hidden;
 }
 
 .products-filters .filter .filter-content .category-title {
@@ -696,18 +720,6 @@ a:hover .products-item-cart {
 
 .products-filters .sort li span {
   cursor: pointer;
-}
-
-.products-filters .filter-icon {
-  margin-left: 11px;
-}
-
-.products-filters .filter-icon.active svg path {
-  fill: #F16D7F;
-}
-
-.products-filters .ff-icon {
-  fill: #000000;
 }
 
 .products-filters .sort-icon {

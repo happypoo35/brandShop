@@ -586,6 +586,17 @@ body {
 
                 .button {
                     text-transform: uppercase;
+
+                    @extend %transition;
+
+                    .filter-icon {
+                        margin-left: 11px;
+                    }
+
+                    .ff-icon {
+                        fill: #000000;
+                        @extend %transition;
+                    }                    
                 }
             }
 
@@ -593,9 +604,24 @@ body {
                 padding-left: 16px;
                 box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
                 background-color: #FFFFFF;
+
+                .button {
+                    color: $brandColor;
+
+                    .filter-icon {
+                        svg path {
+                            fill: $brandColor;
+                        }
+                    }                    
+                }
+
+                .filter-content {
+                    visibility: visible;
+                }
             }
 
             .filter-content {
+                visibility: hidden;
 
                 .category-title {
                     border-left: 5px solid $brandColor;
@@ -668,23 +694,6 @@ body {
                 }
             }
         }
-
-        .filter-icon {
-            margin-left: 11px;
-        }
-
-        .filter-icon.active {
-
-            svg path {
-                fill: $brandColor;
-            }
-        }
-
-        .ff-icon {
-            fill: #000000;
-            @extend %transition;
-        }
-        
 
         .sort-icon {
             margin-left: 10px;
