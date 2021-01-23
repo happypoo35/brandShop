@@ -388,12 +388,12 @@ body {
 		}
 	}
 	&-items {
-        display: grid;
-        column-gap: $itemsSpaces;
-        row-gap: $itemsSpaces;
-        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 	}
 	&-item {
+        margin-bottom: $itemsSpaces;
 
         background: #F8F8F8;
         
@@ -491,8 +491,7 @@ body {
 	}
 
 	&-button {
-
-        margin-top: 48px;
+        margin-top: 18px;
         text-align: center;
 
 		a {

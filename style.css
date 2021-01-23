@@ -371,16 +371,18 @@ body {
 }
 
 .products-items {
-  display: -ms-grid;
-  display: grid;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-  row-gap: 30px;
-  -ms-grid-columns: (minmax(360px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .products-item {
+  margin-bottom: 30px;
   background: #F8F8F8;
 }
 
@@ -509,7 +511,7 @@ body {
 }
 
 .products-button {
-  margin-top: 48px;
+  margin-top: 18px;
   text-align: center;
 }
 
