@@ -767,6 +767,54 @@ body {
             @extend %transition;
         }
     }
+
+    &-pagination {
+        margin-top: 18px;
+
+        display: flex;
+        justify-content: center;
+
+        .links {
+
+            display: flex;
+            padding: 10px 16px 10px 16px;
+
+            border: 1px solid #EBEBEB;
+            border-radius: 5px;          
+
+            a {
+
+                display: inline-block;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+
+                color: #C4C4C4;
+
+                i {
+                    color: #000000;
+                    width: 8px;
+                    height: 14px;
+                }
+            }
+
+            a:not(:first-child) {
+                padding-left: 36px;
+            }
+
+            a.active {
+                color: $brandColor;
+            }
+
+            .ellipsis {
+                padding: 0 !important;
+            }
+
+            .ellipsis + a {
+                padding-left: 0 !important;
+            }
+        }
+    }
 }
 
 .subscribe {
