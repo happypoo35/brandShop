@@ -9,8 +9,8 @@ $itemsSpaces: 30px;
     transition: .3s ease;
 }
 
-$laptop: 1150px;
-$tablet: 880px;
+$laptop: 1600px;
+$tablet: 1024px;
 $mobile: 610px;
 
 @mixin laptop {
@@ -360,11 +360,28 @@ body {
 
 .sale {
 	padding-top: 64px;
-	padding-bottom: 96px;
+    padding-bottom: 96px;
+    
+    @include tablet {
+        @include padding16Tablet();
+        padding-top: 20px;
+        padding-bottom: 154px;
+    };    
+
+    @include paddingBig();
+
+    @include tablet {
+        @include padding16Tablet();
+    };    
+
 	&-top {
 		display: flex;
 		padding-bottom: $itemsSpaces;
-		//gap: 30px;
+        
+        @include tablet {
+            padding-bottom: 20px;
+        };         
+
 		img {
 			width: 100%;
 		}
@@ -395,22 +412,31 @@ body {
 		}
 	}
 	&-bottom {
-		position: relative;
+        position: relative;
+        
+        a > img {
+            width: 100%;
+        }
 	}
 	&-item:not(:last-child) {
-		margin-right: $itemsSpaces;
+        margin-right: $itemsSpaces;
+        
+        @include tablet {
+            margin-right: 20px;
+        };         
 	}
 }
 
 .products {
 
+    padding-bottom: 96px;
+
     @include paddingBig();
 
     @include tablet {
         @include padding16Tablet();
+        padding-bottom: 64px;
     };
-
-    padding-bottom: 96px;
 
 	&-header {
 		text-align: center;
