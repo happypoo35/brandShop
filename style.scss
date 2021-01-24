@@ -827,7 +827,7 @@ body {
                     max-height: 200px;
 
                     visibility: visible;
-                    
+
                     @extend %transition;
                 }
 
@@ -916,7 +916,7 @@ body {
 
     background-image: url(articles/photo_subscribe.jpg);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: bottom left 15%;
     background-size: cover;
     
     &-review {
