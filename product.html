@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="header-nav">
+                <ul class="header-nav-left">
+                    <li><a href="index.html"><img src="articles/logo.svg" alt="logo"></a></li>
+                    <li><a href="#"><img src="articles/search.svg" alt="search"></a></li>
+                </ul>
+                <ul class="header-nav-right">
+                    <li>
+                        <a id="header_menu_a" href="#">
+                            <img src="articles/ham.svg" alt="menu">
+                        </a>
+                    </li>
+                    <li><a href="#"><img src="articles/account.svg" alt="account"></a></li>
+                    <li><a href="#">
+                            <div class="cart">
+                                <div class="counter">5</div>
+                                <img src="articles/cart.svg" alt="cart">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="promo small" aria-label="promo">
+                <div class="promo-overlay"></div>
+                <div class="promo-new-title">New arrivals</div>
+                <nav class="promo-breadcrumbs">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Man</a></li>
+                        <li><a class="active" href="">New arrivals</a></li>
+                    </ul>
+                </nav>
+                <div class="promo-menu">
+
+                    <div class="promo-menu-close"><a id="promo_menu_close" href="#"><img src="articles/cross.svg"
+                                alt="close"></a>
+                    </div>
+
+                    <div class="promo-menu-box">
+                        <div class="promo-menu-title">
+                            <h3 class="promo-menu-box-heading">Menu</h3>
+                        </div>
+                        <h3 class="promo-menu-box-category-heading">Man</h3>
+                        <ul>
+                            <li><a href="#"> Accessories</a></li>
+                            <li><a href="#"> Bags</a></li>
+                            <li><a href="#"> Denim</a></li>
+                            <li><a href="#"> T-Shirts</a></li>
+                        </ul>
+                        <h3 class="promo-menu-box-category-heading">Woman</h3>
+                        <ul>
+                            <li><a href="#"> Accessories</a></li>
+                            <li><a href="#"> Jackets & Coats</a></li>
+                            <li><a href="#"> Polos</a></li>
+                            <li><a href="#"> T-Shirts</a></li>
+                            <li><a href="#"> Shirts</a></li>
+                        </ul>
+                        <h3 class="promo-menu-box-category-heading">Kids</h3>
+                        <ul>
+                            <li><a href="#"> Accessories</a></li>
+                            <li><a href="#"> Jackets & Coats</a></li>
+                            <li><a href="#"> Polos</a></li>
+                            <li><a href="#"> T-Shirts</a></li>
+                            <li><a href="#"> Shirts</a></li>
+                            <li><a href="#"> Bags</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <section class="subscribe" aria-label="subscribe">
+                <div class="subscribe-review">
+                    <div class="subscribe-photo">
+                        <img src="articles/photo_1.png" alt="user review">
+                    </div>
+                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+                </div>
+                <div class="subscribe-form">
+                    <p>
+                        SUBSCRIBE<br>
+                        <span>FOR OUR NEWLETTER AND PROMOTION</span>
+                    </p>
+                    <form action="#">
+                        <input class="subscribe-form-input" id="temail" name="email" type="email"
+                            placeholder="Enter Your Email" autocomplete="off" required />
+                        <input class="subscribe-form-submit" type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </section>
+            <div class="footer-copy-socials">
+                <div class="footer-rights">
+                    <p>© 2021 Brand All Rights Reserved.</p>
+                </div>
+                <div class="footer-socials">
+                    <ul>
+                        <li><a class="footer-socials-icon" href="#" aria-label="socials">
+                                <i class="fab fa-facebook-f"></i>
+                            </a></li>
+                        <li>
+                            <a class="footer-socials-icon" href="#" aria-label="socials">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="footer-socials-icon" href="#" aria-label="socials">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+
+                        </li>
+                        <li><a class="footer-socials-icon" href="#" aria-label="socials">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

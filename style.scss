@@ -317,7 +317,7 @@ body {
         color: $brandColor;
     }
 
-    &.catalog {
+    &.small {
         @include paddingBig();
 
         @include tablet {
@@ -790,8 +790,10 @@ body {
                     left: -10px;
                     top: 20px;
 
+                    overflow: hidden;
+
                     box-sizing: border-box;
-                    min-height: 0;
+                    max-height: 0;
                     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
                     background-color: #FFFFFF;
                     z-index: 1;
@@ -822,14 +824,15 @@ body {
             .dropdown.show {
 
                 .dropdown-content {
-                    max-height: 500px;
-                    visibility: visible;
+                    max-height: 200px;
 
+                    visibility: visible;
+                    
                     @extend %transition;
                 }
 
                 .sort-icon {
-                transform: rotate(-180deg);            
+                    transform: rotate(-180deg);            
                 }
             }            
 
