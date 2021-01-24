@@ -37,15 +37,39 @@ $mobile: 610px;
 }
 ;
 
+@mixin padding16Tablet {
+	padding-left: calc(50% - 368px);
+	padding-right: calc(50% - 368px);
+}
+;
+
+@mixin padding32Tablet {
+	padding-left: calc(50% - 352px);
+	padding-right: calc(50% - 352px);
+}
+;
+
 @mixin paddingBig {
 	padding-left: calc(50% - 570px);
 	padding-right: calc(50% - 570px);    
 }
 ;
 
+@mixin paddingMediumTablet {
+    padding-left: calc(50% - 680px);
+    padding-right: calc(50% - 665px);    
+}
+;
+
 @mixin paddingMedium {
     padding-left: calc(50% - 680px);
     padding-right: calc(50% - 665px);    
+}
+;
+
+@mixin paddingSmallTablet {
+	padding-left: calc(50% - 800px);
+	padding-right: calc(50% - 800px); 
 }
 ;
 
@@ -100,10 +124,16 @@ body {
 }
 
 .center {
-	@include paddingBig()
+    @include paddingBig();
 }
 
 .header {
+    @include paddingBig();
+
+    @include tablet {
+        @include padding32Tablet();
+    };
+
 	background-color: $darkColor;
 	height: 75px;
 	display: flex;
@@ -290,6 +320,10 @@ body {
     &.catalog {
         @include paddingBig();
 
+        @include tablet {
+            @include padding16Tablet();
+        }
+
         justify-content: space-between;
         align-items: center;
     }
@@ -369,6 +403,12 @@ body {
 }
 
 .products {
+
+    @include paddingBig();
+
+    @include tablet {
+        @include padding16Tablet();
+    };
 
     padding-bottom: 96px;
 
@@ -514,6 +554,8 @@ body {
     }
     
 	&-footer {
+        @include paddingBig();
+
         min-height: 341px;
         
         background: $darkColor;
@@ -522,13 +564,25 @@ body {
 
             padding-top: 103px;
 
+            @include tablet {
+                padding-top: 48px;
+            }            
+
 			ul {
 				display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 
-                //align-items: center;
+                @include tablet {
+                    flex-direction: column;
+                    align-items: center;
+                }
                 
 				li {
+
+                    @include tablet {
+                        padding-bottom: 64px;
+                    }                    
+
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -562,16 +616,14 @@ body {
     &-filters {
         padding-top: 51px;
         padding-bottom: 64px;
-        display:grid;
+        display:flex;
         font-size: 14px;
         line-height: 17px;
-
-        column-gap: $itemsSpaces;
-        grid-template-columns: 360px 2fr;
 
         .filter {
             position: relative;
             font-weight: 600;
+            width: 360px;
 
             .filter-box {
                 padding-right: 15px;
@@ -684,8 +736,9 @@ body {
         }        
 
         .sort {
-            display: flex;
+            margin-left: $itemsSpaces;
 
+            display: flex;
             li {
                 font-weight: normal;       
                 padding-right: 48px;
@@ -697,7 +750,9 @@ body {
                 }
             }
 
-
+            li:last-child {
+                padding-right: 0;
+            }
             
             .dropdown {
                 position: relative;
@@ -822,6 +877,12 @@ body {
 
     display: flex;
 
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }       
+
+
     min-height: 448px;
 
     background-image: url(articles/photo_subscribe.jpg);
@@ -830,8 +891,13 @@ body {
     background-size: cover;
     
     &-review {
+
         padding-top: 97px;
         width: 50%;
+
+        @include tablet {
+            padding-top: 64px;
+        }         
 
         display: flex;
         flex-direction: column;
@@ -852,6 +918,12 @@ body {
 
     &-form {
         padding-top: 150px;
+
+        @include tablet {
+            padding-top: 48px;
+            padding-bottom: 140px;
+        }        
+
         width: 50%;
 
         display: flex;
@@ -919,6 +991,10 @@ body {
 
     &-copy-socials {
         @include paddingMedium();
+
+        @include tablet {
+            @include padding32Tablet();
+        }  
 
         height: 79px;
 

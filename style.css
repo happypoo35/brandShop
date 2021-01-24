@@ -32,6 +32,8 @@ body {
 }
 
 .header {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
   background-color: #222222;
   height: 75px;
   display: -webkit-box;
@@ -43,6 +45,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 880px) {
+  .header {
+    padding-left: calc(50% - 352px);
+    padding-right: calc(50% - 352px);
+  }
 }
 
 .header-nav {
@@ -260,6 +269,13 @@ body {
           align-items: center;
 }
 
+@media screen and (max-width: 880px) {
+  .promo.catalog {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+  }
+}
+
 .promo-breadcrumbs ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,7 +365,16 @@ body {
 }
 
 .products {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
   padding-bottom: 96px;
+}
+
+@media screen and (max-width: 880px) {
+  .products {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+  }
 }
 
 .products-header {
@@ -532,6 +557,8 @@ body {
 }
 
 .products-footer {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
   min-height: 341px;
   background: #222222;
 }
@@ -540,12 +567,31 @@ body {
   padding-top: 103px;
 }
 
+@media screen and (max-width: 880px) {
+  .products-footer-items {
+    padding-top: 48px;
+  }
+}
+
 .products-footer-items ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 880px) {
+  .products-footer-items ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .products-footer-items ul li {
@@ -560,6 +606,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #FBFBFB;
+}
+
+@media screen and (max-width: 880px) {
+  .products-footer-items ul li {
+    padding-bottom: 64px;
+  }
 }
 
 .products-footer-items ul li h4 {
@@ -586,19 +638,17 @@ body {
 .products-filters {
   padding-top: 51px;
   padding-bottom: 64px;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 14px;
   line-height: 17px;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-  -ms-grid-columns: 360px 2fr;
-      grid-template-columns: 360px 2fr;
 }
 
 .products-filters .filter {
   position: relative;
   font-weight: 600;
+  width: 360px;
 }
 
 .products-filters .filter .filter-box {
@@ -709,6 +759,7 @@ body {
 }
 
 .products-filters .sort {
+  margin-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -723,6 +774,10 @@ body {
 
 .products-filters .sort li span {
   cursor: pointer;
+}
+
+.products-filters .sort li:last-child {
+  padding-right: 0;
 }
 
 .products-filters .sort .dropdown {
@@ -849,6 +904,18 @@ body {
   background-size: cover;
 }
 
+@media screen and (max-width: 880px) {
+  .subscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .subscribe-review {
   padding-top: 97px;
   width: 50%;
@@ -862,6 +929,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 880px) {
+  .subscribe-review {
+    padding-top: 64px;
+  }
 }
 
 .subscribe-review p {
@@ -888,6 +961,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #222222;
+}
+
+@media screen and (max-width: 880px) {
+  .subscribe-form {
+    padding-top: 48px;
+    padding-bottom: 140px;
+  }
 }
 
 .subscribe-form p {
@@ -953,6 +1033,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 880px) {
+  .footer-copy-socials {
+    padding-left: calc(50% - 352px);
+    padding-right: calc(50% - 352px);
+  }
 }
 
 .footer-rights p {
