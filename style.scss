@@ -1,49 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+@import 'config';
 
-$additionalDarkColor: #9F9F9F;
-$brandColor: #F16D7F;
-$blackColor: #000;
-$darkColor: #222222;
-
-$itemsSpaces: 30px;
-
-%transition {
-    transition: .3s ease;
-}
-
-$laptop: 1140px;
-$tablet: 1024px;
-$mobile: 610px;
-
-@mixin laptop {
-    @media screen and (max-width: $laptop) {
-        @content;
-    }
-
-    ;
-}
-
-;
-
-@mixin tablet {
-    @media screen and (max-width: $tablet) {
-        @content;
-    }
-
-    ;
-}
-
-;
-
-@mixin mobile {
-    @media screen and (max-width: $mobile) {
-        @content;
-    }
-
-    ;
-}
-
-;
 
 @mixin padding16Tablet {
     padding-left: calc(50% - 368px);
@@ -94,42 +51,6 @@ $mobile: 610px;
 
 ;
 
-@mixin overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    background-color: transparent;
-    transition-property: background-color;
-    visibility: hidden;
-
-    @extend %transition;
-}
-
-;
-
-@mixin overlay_hover {
-    opacity: 1;
-    background-color: rgba(58, 56, 56, 0.86);
-    visibility: visible;
-}
-
-;
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
 
 body {
     font-family: Lato;
@@ -512,6 +433,7 @@ body {
 
     &-item {
         margin-bottom: $itemsSpaces;
+        padding-bottom: 20px;
 
         background: #F8F8F8;
 
@@ -561,19 +483,6 @@ body {
             color: #FFFFFF;
 
             transition: .5s ease;
-
-            &-button {
-                padding: 6px 12px;
-
-                border: 1px solid #FFFFFF;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-
-                img {
-                    margin-right: 11px;
-                }
-            }
         }
 
         &-content {
@@ -602,8 +511,6 @@ body {
 
         &-price {
             padding-top: 18px;
-            padding-bottom: 20px;
-
             span {
                 font-weight: normal;
                 font-size: 16px;
@@ -849,7 +756,7 @@ body {
     }
 }
 
-.filter.show {
+.filter.show {products-item-
 
     .filter-box {
         padding-left: 16px;
@@ -947,7 +854,6 @@ body {
             transform: rotate(-180deg);
         }
     }
-
 }
 
 .sort-icon {
@@ -964,6 +870,7 @@ body {
 }
 
 .product-preview {
+
     background-color: #F7F7F7;
 
     &-button {
@@ -986,6 +893,7 @@ body {
     &-wrap {
         border-top: 1px solid #EAEAEA;
         border-bottom: 1px solid #EAEAEA;
+        background-color: #FFF;
         z-index: 1;
 
         @include paddingBig();
@@ -998,10 +906,16 @@ body {
         &-filters {
             @extend .products-filters;
         }
+
+        .products {
+            padding-top: 128px;
+            padding-bottom: 128px;
+        }
     }
 
     &-content {
         padding-top: 64px;
+        padding-bottom: 64px;
 
         border: 1px solid #EAEAEA;
         transform: translateY(-50px);
@@ -1083,6 +997,10 @@ body {
         display: flex;
         font-size: 14px;
         line-height: 17px;
+    }
+
+    &-cart {
+        padding-top: 48px;
     }
 }
 
@@ -1299,4 +1217,52 @@ body {
         }
 
     }
+}
+
+.cart-button {
+    padding: 6px 12px;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+        margin-right: 11px;
+    }
+}
+
+.white-button {
+    border: 1px solid #FFFFFF;
+}
+
+.brand-button {
+    padding: 10px 42px 10px 42px;
+
+    border: 1px solid $brandColor;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: $brandColor;
+
+    @extend %transition;
+
+    >svg {
+        margin-right: 22px;
+    }
+}
+
+.brand-button:hover {
+    color: #FFF;
+    background-color: $brandColor;
+}
+
+.cart-icon-brand {
+    fill: $brandColor;
+
+    @extend %transition;
+}
+
+.brand-button:hover .cart-icon-brand {
+    fill: #FFF;
 }

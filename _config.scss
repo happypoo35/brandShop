@@ -1,0 +1,79 @@
+$additionalDarkColor: #9F9F9F;
+$brandColor: #F16D7F;
+$blackColor: #000;
+$darkColor: #222222;
+
+$itemsSpaces: 30px;
+
+$laptop: 1150px;
+$tablet: 1024px;
+$mobile: 610px;
+
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+        @content;
+    }
+
+    ;
+}
+
+;
+
+@mixin tablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+
+    ;
+}
+
+;
+
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+    ;
+};
+
+
+@mixin overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: transparent;
+    transition-property: background-color;
+    visibility: hidden;
+
+    @extend %transition;
+}
+
+;
+
+@mixin overlay_hover {
+    opacity: 1;
+    background-color: rgba(58, 56, 56, 0.86);
+    visibility: visible;
+}
+;
+
+%transition {
+    transition: .3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
