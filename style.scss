@@ -141,7 +141,6 @@ body {
 }
 
 .promo {
-    @include paddingSmall();
 
     min-height: 148px;
     position: relative;
@@ -198,6 +197,7 @@ body {
         box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
         visibility: hidden;
         transition: .3s ease;
+        z-index: 1;
 
         &-close {
             margin-bottom: 8px;
@@ -248,7 +248,6 @@ body {
     &-menu.show {
         transform: translateX(0);
         visibility: visible;
-        z-index: 1;
     }
 
     &-overlay {
@@ -511,6 +510,7 @@ body {
 
         &-price {
             padding-top: 18px;
+
             span {
                 font-weight: normal;
                 font-size: 16px;
@@ -612,7 +612,7 @@ body {
         line-height: 17px;
 
         .sort {
-            margin-left: $itemsSpaces;            
+            margin-left: $itemsSpaces;
         }
     }
 
@@ -756,7 +756,7 @@ body {
     }
 }
 
-.filter.show {products-item-
+.filter.show {
 
     .filter-box {
         padding-left: 16px;
@@ -903,6 +903,7 @@ body {
         }
 
         ;
+
         &-filters {
             @extend .products-filters;
         }
@@ -1161,10 +1162,280 @@ body {
     }
 }
 
+.shopping-cart {
+    padding-top: 96px;
+    padding-bottom: 128px;
+
+    @include paddingBig();
+
+    @include tablet {
+        @include padding16Tablet();
+
+        padding-top: 64px;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .cart-items {
+        width: 100%;
+        max-width: 652px;
+
+        @include tablet {
+            max-width: unset;
+            margin-bottom: 64px;
+        }
+
+        .cart-buttons {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                margin-top: 24px;
+                padding: 16px 40px;
+                background: none;
+
+                font-size: 14px;
+                line-height: 17px;
+                cursor: pointer;
+
+                border: 1px solid #A4A4A4;
+                outline: none;
+
+                color: #4A4A4A;                
+            }
+        }
+    }
+
+    .cart-item {
+        display: flex;
+
+        box-shadow: 16px 16px 24px rgba(0, 0, 0, 0.10);
+
+        &:not(:last-child) {
+            margin-bottom: 40px;            
+        }
+    }
+
+
+
+    .cart-img {
+        width: 262px;
+        display: flex;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .cart-content {
+        padding-left: 31px;
+        padding-top: 22px;
+        padding: 22px 22px 0 32px;
+
+        flex-grow: 1;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+
+            >h3 {
+                padding-bottom: 42px;
+                max-width: 200px;
+
+                text-transform: uppercase;
+
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 29px;
+
+                color: $darkColor;
+            }
+
+            .close {
+                padding-top: 6px;
+
+                >a>img {
+                    color: #575757;
+                }
+            }
+        }
+
+        ul li {
+            padding-bottom: 6px;
+
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 26px;
+
+            color: #575757;
+        }
+
+        .price {
+            color: $brandColor;
+        }
+
+        .quantity {
+            display: flex;
+        }
+
+        .quantity-input {
+            margin-top: 2px;
+            margin-left: 24px;
+
+            width: 42px;
+            text-align: center;
+            height: 20px;
+
+            color: #656565;
+
+            border: 1px solid #EAEAEA;
+        }
+    }
+
+    .address-subtotal {
+        padding-top: 16px;
+
+        width: 100%;
+        max-width: 360px;
+
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: unset;
+            align-items: center;            
+            width: 100%;
+            max-width: unset;
+        }
+
+        .form {
+            margin-bottom: 54px;
+
+            display: flex;
+            flex-direction: column;
+
+            >h3 {
+                text-transform: uppercase;
+
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+
+                color: $darkColor;
+            }
+
+            input {
+                line-height: 16px;
+                font-weight: 300;
+                border: 1px solid #A4A4A4;
+                outline: none;
+                box-sizing: border-box;
+            }
+
+            .input-big {
+                margin-top: 20px;
+                padding: 16px;
+
+                font-size: 13px;
+
+                width: 100%;
+                color: $darkColor;
+            }
+
+            .input-big::placeholder {
+                color: #B1B1B1;
+            }
+
+            .get-a-quote {
+                margin-top: 24px;
+                padding: 10px;
+                background: none;
+
+                color: #4A4A4A;
+                cursor: pointer;
+            }
+        }
+
+        .subtotal {
+            padding: 44px;
+
+            @include tablet {
+                width: 100%;
+                max-width: 360px;
+                margin-left: 16px;
+            }
+
+            background-color: #F5F3F3;
+            box-sizing: border-box;
+
+            .content {
+
+                div {
+                    text-align: right;
+
+                    span {
+                        margin-left: 32px;                        
+                    }
+                }
+
+                .total {
+                    margin-bottom: 12px;
+
+                    font-weight: normal;
+                    font-size: 11px;
+                    line-height: 13px;
+
+                    color: #4A4A4A;                    
+                }
+
+                .grand-total {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    color: #222222;
+                    
+                    span {
+                        font-weight: bold;
+
+                        color: #F16D7F;                        
+                    }
+                }
+
+                .text {
+                    padding-bottom: 20px;
+                    margin-bottom: 16px;
+                    border-bottom: 1px solid #E2E2E2;
+                }
+
+                .button {
+                    padding: 16px 32px;
+                    width: 100%;
+
+
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    color: #FFFFFF;
+                    cursor: pointer;
+
+                    border: none;
+                    outline: none;
+                    background-color: $brandColor;
+                }
+            }
+        }
+    }
+}
+
 .footer {
 
     &-copy-socials {
-        @include paddingMedium();
+        @include paddingBig();
 
         @include tablet {
             @include padding32Tablet();
