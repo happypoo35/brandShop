@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: Lato;
+    font-style: normal;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+a {
+    @include fontSize(0.875rem, 1.063rem);
+    text-decoration: none;
+}
+
+p {
+    @include fontSize(0.875rem, 1.063rem);
+}
+
+ul {
+    list-style: none;
+}
+
+.center {
+  max-width: $xxl;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;  
+  padding: 0 2rem;
+
+  @include xl {
+      padding: 0 2rem;
+  }
+
+  @include lg {
+      padding: 0 1rem;
+  }
+
+  @include md {
+      padding: 0 1rem;
+  }
+
+  @include sm {
+      padding: 0 1rem;
+  }
+}

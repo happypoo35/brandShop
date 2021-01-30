@@ -1,40 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+
 $additionalDarkColor: #9F9F9F;
 $brandColor: #F16D7F;
 $blackColor: #000;
 $darkColor: #222222;
 
-$itemsSpaces: 30px;
-
-$laptop: 120px;
-$tablet: 1024px;
-$mobile: 610px;
-
-@mixin laptop {
-    @media screen and (max-width: $laptop) {
-        @content;
-    }
-
-    ;
+%mb12 {
+    margin-bottom: 0.75rem;
+}
+%mb16 {
+    margin-bottom: 1rem;
+}
+%mb32 {
+    margin-bottom: 2rem;
+}
+%mb64 {
+    margin-bottom: 4rem;
+}
+%mb96 {
+    margin-bottom: 6rem;
+}
+%mb128 {
+    margin-bottom: 8rem;
 }
 
-;
-
-@mixin tablet {
-    @media screen and (max-width: $tablet) {
-        @content;
-    }
-
-    ;
+%ml16 {
+    margin-left: 1rem;
+}
+%ml32 {
+    margin-left: 2rem;
 }
 
-;
+%mr16 {
+    margin-right: 1rem;    
+}
+%mr32 {
+    margin-right: 2rem;
+}
 
-@mixin mobile {
-    @media screen and (max-width: $mobile) {
-        @content;
-    }
-    ;
-};
+%pb12 {
+    padding-bottom: 0.75rem;
+}
+%pb16 {
+    padding-bottom: 1rem;
+}
+%pb32 {
+    padding-bottom: 2rem;
+}
+%pb64 {
+    padding-bottom: 4rem;
+}
+%pb96 {
+    padding-bottom: 6rem;
+}
+%pb128 {
+    padding-bottom: 8rem;
+}
+
+
+%tr {
+  transition: 0.3s ease;
+}
+
+$xxl: 1200px;
+$xl: 1156px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+
+@mixin xxl {
+  @media screen and(max-width:$xxl) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and(max-width:$xl) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and(max-width:$lg) {
+    @content;
+  }
+}
+@mixin md {
+  @media screen and(max-width:$md) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and(max-width:$sm) {
+    @content;
+  }
+}
 
 
 @mixin overlay {
@@ -48,32 +107,19 @@ $mobile: 610px;
     transition-property: background-color;
     visibility: hidden;
 
-    @extend %transition;
+    @extend %tr;
 }
-
-;
-
 @mixin overlay_hover {
     opacity: 1;
-    background-color: rgba(58, 56, 56, 0.86);
+    background-color: rgba(58, 56, 56, 0.756);
     visibility: visible;
 }
-;
 
-%transition {
-    transition: .3s ease;
-}
+@mixin fontSize($size, $height, $weight: false) {
+    font-size: $size;
+    line-height: $height;
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
+    @if $weight {
+        font-weight: $weight;
+    }
 }
