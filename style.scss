@@ -8,11 +8,12 @@
     justify-content: space-between;
     align-items: center;
 
-    &-nav {
+    &__nav {
         display: flex;
         justify-content: space-between;
 
-        ul {
+        &-left,
+        &-right {
             display: flex;
             align-items: center;
         }
@@ -29,10 +30,10 @@
         &-right li:last-child {
             margin-left: 2.5rem;
         }
+    }
 
-        &-right .cart {
-            position: relative
-        }
+    &__cart {
+        position: relative;
 
         .counter {
             position: absolute;
@@ -44,13 +45,12 @@
             height: 1.3rem;
             background: $brandColor;
 
-            padding-top: 2px;
+            padding-top: 4px;
             @include fontSize(0.75rem, 0.75rem);
             text-align: center;
 
             color: #FFFFFF;
-        }        
-
+        }
     }
 
     &-dropdown {
@@ -74,7 +74,7 @@
 
     padding: 1rem 2rem;
 
-    height: 762px;
+    height: 763px;
 
     position: absolute;
     background: #FFFFFF;
@@ -92,35 +92,33 @@
         padding-right: 3.125rem;
     }
 
+    &__title,
+    &__cat-title {
+        text-transform: uppercase;
+    }
+
     &__title {
         padding-bottom: 1.5rem;
 
-        text-transform: uppercase;
-        @include fontSize(0.875rem, 1.063rem, bold);
-
+        font-weight: 700;
         color: $blackColor;
     }
 
     &__cat-title {
-            @extend %mb12;
-
-            text-transform: uppercase;
-            @include fontSize(0.875rem, 1.063rem, bold);
-
-            color: $brandColor;
-            text-transform: uppercase;
+        @extend %mb12;
+        font-weight: 400;
     }
 
     &__nav {
         margin-bottom: 1.25rem;
-        margin-left: 1.4rem;  
+        margin-left: 1.4rem;
 
         &-list {
-            @extend %mb12;          
+            @extend %mb12;
         }
 
         &-link {
-            color: #6F6E6E;            
+            color: #6F6E6E;
         }
     }
 }
@@ -131,11 +129,10 @@
 }
 
 .promo {
-
     @extend %mb64;
 
     @include md {
-        margin-bottom: 1.25rem;        
+        margin-bottom: 1.25rem;
     }
 
     min-height: 148px;
@@ -143,49 +140,35 @@
     background: #F1E4E6;
     display: flex;
 
-    &-img {
+    &__img-container {
         width: 50%;
         display: flex;
-
-        img {
-            width: 100%;
-        }
     }
 
-    &-text {
+    &__text {
         width: 50%;
     }
 
-    &-content {
+    &__content {
         padding-left: 1rem;
 
         margin-top: 40%;
         border-left: 12px solid $brandColor;
     }
 
-    &-heading {
+    &__title {
         font-weight: 900;
         font-size: 3rem;
         line-height: 3.6rem;
         color: $darkColor;
+        text-transform: uppercase;
     }
 
-    &-info {
+    &__info {
         font-size: 2rem;
         font-weight: bold;
         line-height: 2.4rem;
-
-        span {
-            color: $brandColor;
-        }
-    }
-
-    &-overlay {
-        @include overlay();
-    }
-
-    &-overlay.show {
-        @include overlay_hover();
+        text-transform: uppercase;
     }
 
     &-new-title {
@@ -197,9 +180,8 @@
         color: $brandColor;
     }
 
-    &.small {
-        @include md {
-        }
+    &__small {
+        @include md {}
 
         justify-content: space-between;
         align-items: center;
@@ -241,21 +223,19 @@
 
     @include md {
         margin-bottom: 9.625rem;
-    };
-
-    &__img {
-        width: 100%;
     }
+
+    ;
 
     &__link {
         font-size: 1rem;
         line-height: 1.188rem;
         text-align: center;
-        
-        
+
+
     }
 
-    &__text{
+    &__text {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -266,11 +246,11 @@
         justify-content: center;
         align-items: center;
 
-        > p {
+        >p {
             color: #FFFFFF;
         }
 
-        > h3 {
+        >h3 {
             color: $brandColor;
         }
     }
@@ -309,8 +289,8 @@
     padding-bottom: 96px;
 
     @include lg {
-            max-width: 100%;
-         width: 768px;
+        max-width: 100%;
+        width: 768px;
     }
 
     @include md {
@@ -319,15 +299,13 @@
 
     ;
 
-    &-header {
+    &__header {
         text-align: center;
         padding-bottom: 48px;
 
         h3 {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 30px;
-            line-height: 36px;
+            font-size: 1.875rem;
+            line-height: 2.25rem;
         }
 
         p {
@@ -337,42 +315,25 @@
         }
     }
 
-    &-items {
+    &__items {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 
-    &-item {
-        
+    &__item {
+
         @extend %mb32;
         padding-bottom: 1.25rem;
 
         background: #F8F8F8;
 
-        &-img:hover &-overlay {
-            @include overlay_hover();
+        &-img {
+            position: relative;
         }
 
         &-img:hover &-cart {
             opacity: 1;
-        }
-
-        &-img {
-            position: relative;
-
-            &>img {
-                width: 100%;
-            }
-        }
-
-        &-overlay {
-            @include overlay();
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
         &-cart {
@@ -1099,7 +1060,7 @@
                 border: 1px solid #A4A4A4;
                 outline: none;
 
-                color: #4A4A4A;                
+                color: #4A4A4A;
             }
         }
     }
@@ -1110,7 +1071,7 @@
         box-shadow: 16px 16px 24px rgba(0, 0, 0, 0.10);
 
         &:not(:last-child) {
-            margin-bottom: 40px;            
+            margin-bottom: 40px;
         }
     }
 
@@ -1202,7 +1163,7 @@
 
         @include md {
             flex-direction: unset;
-            align-items: center;            
+            align-items: center;
             width: 100%;
             max-width: unset;
         }
@@ -1271,7 +1232,7 @@
                     text-align: right;
 
                     span {
-                        margin-left: 32px;                        
+                        margin-left: 32px;
                     }
                 }
 
@@ -1282,7 +1243,7 @@
                     font-size: 11px;
                     line-height: 13px;
 
-                    color: #4A4A4A;                    
+                    color: #4A4A4A;
                 }
 
                 .grand-total {
@@ -1291,11 +1252,11 @@
                     line-height: 19px;
 
                     color: #222222;
-                    
+
                     span {
                         font-weight: bold;
 
-                        color: #F16D7F;                        
+                        color: #F16D7F;
                     }
                 }
 
