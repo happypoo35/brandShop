@@ -1203,7 +1203,14 @@ body {
                 border: 1px solid #A4A4A4;
                 outline: none;
 
-                color: #4A4A4A;                
+                color: #4A4A4A;
+
+                @extend %transition;
+
+                &:hover {
+                    background: #A4A4A4;
+                    color: #FFF;
+                }                
             }
         }
     }
@@ -1241,7 +1248,7 @@ body {
             display: flex;
             justify-content: space-between;
 
-            >h3 {
+            > h3 {
                 padding-bottom: 42px;
                 max-width: 200px;
 
@@ -1251,7 +1258,9 @@ body {
                 font-size: 24px;
                 line-height: 29px;
 
-                color: $darkColor;
+                > a {
+                    color: $darkColor;                    
+                }
             }
 
             .close {
@@ -1292,6 +1301,7 @@ body {
             color: #656565;
 
             border: 1px solid #EAEAEA;
+            outline: none;
         }
     }
 
@@ -1356,6 +1366,14 @@ body {
 
                 color: #4A4A4A;
                 cursor: pointer;
+
+
+                @extend %transition;
+
+                &:hover {
+                    background: #A4A4A4;
+                    color: #FFF;
+                }                  
             }
         }
 
@@ -1426,6 +1444,12 @@ body {
                     border: none;
                     outline: none;
                     background-color: $brandColor;
+
+                    @extend %transition;
+
+                    &:hover {
+                        background: #E05C6E;
+                    }                    
                 }
             }
         }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
-.promo-overlay, .products-item-overlay, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .my-carousel-wrap, .subscribe-form-submit, .footer-socials-icon, .brand-button, .cart-icon-brand {
+.promo-overlay, .products-item-overlay, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .my-carousel-wrap, .subscribe-form-submit, .shopping-cart .cart-items .cart-buttons button, .shopping-cart .address-subtotal .form .get-a-quote, .shopping-cart .address-subtotal .subtotal .content .button, .footer-socials-icon, .brand-button, .cart-icon-brand {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -1276,6 +1276,11 @@ body {
   color: #4A4A4A;
 }
 
+.shopping-cart .cart-items .cart-buttons button:hover {
+  background: #A4A4A4;
+  color: #FFF;
+}
+
 .shopping-cart .cart-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1324,6 +1329,9 @@ body {
   font-weight: normal;
   font-size: 24px;
   line-height: 29px;
+}
+
+.shopping-cart .cart-content .title > h3 > a {
   color: #222222;
 }
 
@@ -1361,6 +1369,7 @@ body {
   height: 20px;
   color: #656565;
   border: 1px solid #EAEAEA;
+  outline: none;
 }
 
 .shopping-cart .address-subtotal {
@@ -1450,6 +1459,11 @@ body {
   cursor: pointer;
 }
 
+.shopping-cart .address-subtotal .form .get-a-quote:hover {
+  background: #A4A4A4;
+  color: #FFF;
+}
+
 .shopping-cart .address-subtotal .subtotal {
   padding: 44px;
   background-color: #F5F3F3;
@@ -1510,6 +1524,10 @@ body {
   border: none;
   outline: none;
   background-color: #F16D7F;
+}
+
+.shopping-cart .address-subtotal .subtotal .content .button:hover {
+  background: #E05C6E;
 }
 
 .footer-copy-socials {
