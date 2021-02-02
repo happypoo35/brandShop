@@ -290,7 +290,12 @@ body {
                     font-size: 14px;
                     line-height: 17px;
                     color: #636363;
-                    ;
+
+                    @extend %transition;
+
+                    &:hover {
+                        color: $brandColor;
+                    }
                 }
             }
 
@@ -748,11 +753,6 @@ body {
                 }
             }
         }
-
-    }
-
-    span {
-        cursor: pointer;
     }
 }
 
@@ -781,8 +781,7 @@ body {
 }
 
 .sort {
-    display: flex;
-
+    display: flex;Cgfcb,j    
     li {
         font-weight: normal;
         padding-right: 48px;
@@ -980,8 +979,7 @@ body {
             border: none;
             color: $brandColor;
             background-color: $brandColor;
-        }
-
+        }Cgfcb,j    
         .hr-big {
             margin-top: 64px;
             margin-bottom: 64px;
@@ -1328,6 +1326,8 @@ body {
             flex-direction: column;
 
             >h3 {
+                padding-bottom: 20px;
+
                 text-transform: uppercase;
 
                 font-weight: 300;
@@ -1343,20 +1343,6 @@ body {
                 border: 1px solid #A4A4A4;
                 outline: none;
                 box-sizing: border-box;
-            }
-
-            .input-big {
-                margin-top: 20px;
-                padding: 16px;
-
-                font-size: 13px;
-
-                width: 100%;
-                color: $darkColor;
-            }
-
-            .input-big::placeholder {
-                color: #B1B1B1;
             }
 
             .get-a-quote {
@@ -1454,6 +1440,42 @@ body {
             }
         }
     }
+}
+
+.registration {
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+    @include paddingBig();
+
+    @include tablet {
+        @include padding16Tablet();
+
+        padding-top: 64px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+
+    &__form {
+        max-width: 360px;
+        width: 30%;
+        > form  h5 {
+            padding-bottom: 20px;
+
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #222222;            
+        }
+    }
+
+    &__info {
+        max-width: 652px;
+        width: 70%;
+    }
+
 }
 
 .footer {
@@ -1560,4 +1582,39 @@ body {
 
 .brand-button:hover .cart-icon-brand {
     fill: #FFF;
+}
+
+.input {
+    margin-bottom: 20px;
+    padding: 16px;
+
+    font-size: 13px;
+
+    color: $darkColor;
+
+    outline: none;
+
+    &_big {
+        width: 100%;
+    }
+
+    &::placeholder {
+        color: #B1B1B1;
+    }
+}
+
+.checkbox-group {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+
+    label {
+        margin-left: 10px;
+    }
+    .checkbox:not(:first-child) {
+        margin-left: 20px;
+    }
 }

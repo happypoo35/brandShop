@@ -39,7 +39,7 @@
         <main>
             <section class="promo small" aria-label="promo">
                 <div class="promo-overlay"></div>
-                <div class="promo-new-title">Shopping cart</div>
+                <div class="promo-new-title">Registration</div>
                 <div class="promo-menu">
                     <div class="promo-menu-close"><a id="promo_menu_close" href="#"><img src="articles/cross.svg"
                                 alt="close"></a>
@@ -76,81 +76,38 @@
                     </div>
                 </div>
             </section>
-            <section class="shopping-cart">
-                <div class="cart-items">
-                    <article class="cart-item">
-                        <div class="cart-img">
-                            <img src="articles/f_item_3.png" alt="cart item">
+            <section class="registration">
+                <div class="registration__form">
+                    <form action="">
+                        <h5>Your Name</h5>
+                        <input type="text" class="input input_big" placeholder="First Name">
+                        <input type="text" class="input input_big" placeholder="Last Name">
+                        <div class="checkbox-group">
+                            <input class="checkbox" type="radio" id="male" name="gender"><label for="male">Male</label>
+                            <input class="checkbox" type="radio" id="female" name="gender"><label
+                                for="female">Female</label>
                         </div>
-                        <div class="cart-content">
-                            <div class="title">
-                                <h3>
-                                    <a class="cart-title-link" href="product.html">
-                                        Mango people t-shirt
-                                </h3>
-                                <div class="close">
-                                    <a href=""><img src="articles/cross.svg" alt="close"></a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Price:&nbsp;<span class="price">300$</span></li>
-                                <li>Color:&nbsp;<span>Red</span></li>
-                                <li>Size:&nbsp;<span>Xl</span></li>
-                                <li class="quantity">Quantity:
-                                    <input class="quantity-input" type="number">
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="cart-item">
-                        <div class="cart-img">
-                            <img src="articles/f_item_7.png" alt="cart item">
-                        </div>
-                        <div class="cart-content">
-                            <div class="title">
-                                <h3>
-                                    <a class="cart-title-link" href="product.html">
-                                        Mango people t-shirt
-                                </h3>
-                                <div class="close">
-                                    <a href=""><img src="articles/cross.svg" alt="close"></a>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Price:&nbsp;<span class="price">300$</span></li>
-                                <li>Color:&nbsp;<span>Red</span></li>
-                                <li>Size:&nbsp;<span>Xl</span></li>
-                                <li class="quantity">Quantity:
-                                    <input class="quantity-input" type="number" min="0" max="999">
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                    <div class="cart-buttons">
-                        <button>CLEAR SHOPPING CART</button>
-                        <button>CONTINUE SHOPPING</button>
-
-                    </div>
+                        <h5>Login details</h5>
+                        <input type="email" class="input input_big" placeholder="Email" required>
+                        <input type="password" class="input input_big" placeholder="Password" required>
+                        <p class="password-hint">Please use 8 or more characters, with at least 1 number and a mixture
+                            of
+                            uppercase and lowercase letters</p>
+                        <input type="submit" value="JOIN NOW">
+                    </form>
                 </div>
-                <div class="address-subtotal">
-                    <div class="form">
-                        <h3>Shipping address</h3>
-                        <form action="">
-                            <input type="text" class="input input_big" placeholder="Country" required>
-                            <input type="text" class="input input_big" placeholder="State" required>
-                            <input type="text" class="input input_big" placeholder="Postcode / Zip" required>
-                            <input type="submit" class="get-a-quote" value="GET A QUOTE">
-                        </form>
-                    </div>
-                    <div class="subtotal">
-                        <div class="content">
-                            <div class="text">
-                                <div class="total">SUB TOTAL<span>$900</span></div>
-                                <div class="grand-total">GRAND TOTAL <span>$900</span></div>
-                            </div>
-                            <button class="button">PROCEED TO CHECKOUT</button>
-                        </div>
-                    </div>
+                <div class="registration__info">
+                    <h3>LOYALTY HAS ITS PERKS</h3>
+                    <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with
+                        these as soon as you
+                        join:</p>
+                    <ul>
+                        <li>15% off welcome offer</li>
+                        <li>Free shipping, returns and exchanges on all orders</li>
+                        <li>$10 off a purchase on your birthday</li>
+                        <li>Early access to products</li>
+                        <li>Exclusive offers & rewards</li>
+                    </ul>
                 </div>
             </section>
         </main>
@@ -203,8 +160,5 @@
             </div>
         </footer>
     </div>
-
     <script src="js/script.js"></script>
 </body>
-
-</html>
