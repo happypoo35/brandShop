@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
-.brand-button_tr, .promo-overlay, .promo-breadcrumbs ul li a, .products-item-overlay, .products-item-cart, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .my-carousel-wrap, .subscribe-form-submit, .shopping-cart .cart-items .cart-buttons button, .shopping-cart .address-subtotal .form .get-a-quote, .shopping-cart .address-subtotal .subtotal .content .button, .footer-socials-icon, .cart-icon-brand {
+.brand-button_tr, .promo-overlay, .promo-breadcrumbs ul li a, .products-item-overlay, .products-item-cart, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .product-preview-cart__brand-button .cart-icon, .my-carousel-wrap, .subscribe-form-submit, .shopping-cart .cart-items .cart-buttons button, .shopping-cart .address-subtotal .form .get-a-quote, .shopping-cart .address-subtotal .subtotal .content .button, .registration__form__brand-button, .registration__form__brand-button-icon, .footer-socials-icon {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -1114,6 +1114,14 @@ body {
   margin-right: 22px;
 }
 
+.product-preview-cart__brand-button .cart-icon {
+  fill: #F16D7F;
+}
+
+.product-preview-cart__brand-button:hover .cart-icon {
+  fill: #FFF;
+}
+
 .my-carousel {
   width: 100%;
   overflow: hidden;
@@ -1613,9 +1621,63 @@ body {
   color: #222222;
 }
 
+.registration__form__brand-button {
+  padding: 16px 32px 16px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+.registration__form__brand-button > svg {
+  margin-left: 20px;
+}
+
+.registration__form__brand-button-icon {
+  fill: #F16D7F;
+}
+
+.registration__form__brand-button:hover .registration__form__brand-button-icon {
+  fill: #FFF;
+}
+
 .registration__info {
   max-width: 652px;
   width: 50%;
+}
+
+.registration__info > h3 {
+  padding-bottom: 20px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.registration__info > p {
+  padding-bottom: 20px;
+}
+
+.registration__info > ul > li {
+  padding-bottom: 16px;
+}
+
+.registration__info > ul > li:before {
+  content: url(articles/check.svg);
+  width: 20px;
+  height: 16px;
+  padding-right: 20px;
+}
+
+.registration__info > p, .registration__info > ul > li {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .registration__checkbox-group {
@@ -1624,6 +1686,8 @@ body {
 }
 
 .password-hint {
+  padding-top: 16px;
+  padding-bottom: 40px;
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
@@ -1691,19 +1755,6 @@ body {
   color: #FFFFFF;
 }
 
-.brand-button:hover {
-  color: #FFF;
-  background-color: #F16D7F;
-}
-
-.cart-icon-brand {
-  fill: #F16D7F;
-}
-
-.brand-button:hover .cart-icon-brand {
-  fill: #FFF;
-}
-
 .input {
   margin-bottom: 20px;
   padding: 16px;
@@ -1739,6 +1790,7 @@ body {
 }
 
 .checkbox-group label {
+  vertical-align: top;
   margin-left: 10px;
 }
 
