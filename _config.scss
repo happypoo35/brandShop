@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+
 $additionalDarkColor: #9F9F9F;
 $brandColor: #F16D7F;
 $blackColor: #000;
@@ -5,7 +7,7 @@ $darkColor: #222222;
 
 $itemsSpaces: 30px;
 
-$laptop: 120px;
+$laptop: 1200px;
 $tablet: 1024px;
 $mobile: 610px;
 
@@ -33,8 +35,11 @@ $mobile: 610px;
     @media screen and (max-width: $mobile) {
         @content;
     }
+
     ;
-};
+}
+
+;
 
 
 @mixin overlay {
@@ -58,6 +63,7 @@ $mobile: 610px;
     background-color: rgba(58, 56, 56, 0.86);
     visibility: visible;
 }
+
 ;
 
 %transition {

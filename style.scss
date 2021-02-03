@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
 @import 'config';
+@import 'global';
 
 
 @mixin padding16Tablet {
@@ -486,7 +486,20 @@ body {
 
             color: #FFFFFF;
 
-            transition: .5s ease;
+            @extend %transition;
+
+            &__brand-button {
+                padding: 6px 12px;
+                display: flex;
+                align-items: center;
+
+                border-color: #FFF;
+                color: #FFF;
+
+                img {
+                    margin-right: 11px;
+                }
+            }
         }
 
         &-content {
@@ -687,6 +700,7 @@ body {
 
         .button {
             text-transform: uppercase;
+            cursor: pointer;
 
             @extend %transition;
 
@@ -781,7 +795,8 @@ body {
 }
 
 .sort {
-    display: flex;Cgfcb,j    
+    display: flex;
+
     li {
         font-weight: normal;
         padding-right: 48px;
@@ -979,7 +994,8 @@ body {
             border: none;
             color: $brandColor;
             background-color: $brandColor;
-        }Cgfcb,j    
+        }
+
         .hr-big {
             margin-top: 64px;
             margin-bottom: 64px;
@@ -1000,6 +1016,19 @@ body {
 
     &-cart {
         padding-top: 48px;
+
+
+        &__brand-button {
+            padding: 10px 42px 10px 42px;
+
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            >svg {
+                margin-right: 22px;
+            }
+        }
     }
 }
 
@@ -1208,7 +1237,7 @@ body {
                 &:hover {
                     background: #A4A4A4;
                     color: #FFF;
-                }                
+                }
             }
         }
     }
@@ -1219,7 +1248,7 @@ body {
         box-shadow: 16px 16px 24px rgba(0, 0, 0, 0.10);
 
         &:not(:last-child) {
-            margin-bottom: 40px;            
+            margin-bottom: 40px;
         }
     }
 
@@ -1246,7 +1275,7 @@ body {
             display: flex;
             justify-content: space-between;
 
-            > h3 {
+            >h3 {
                 padding-bottom: 42px;
                 max-width: 200px;
 
@@ -1256,8 +1285,8 @@ body {
                 font-size: 24px;
                 line-height: 29px;
 
-                > a {
-                    color: $darkColor;                    
+                >a {
+                    color: $darkColor;
                 }
             }
 
@@ -1314,7 +1343,7 @@ body {
 
         @include tablet {
             flex-direction: unset;
-            align-items: center;            
+            align-items: center;
             width: 100%;
             max-width: unset;
         }
@@ -1359,7 +1388,7 @@ body {
                 &:hover {
                     background: #A4A4A4;
                     color: #FFF;
-                }                  
+                }
             }
         }
 
@@ -1381,7 +1410,7 @@ body {
                     text-align: right;
 
                     span {
-                        margin-left: 32px;                        
+                        margin-left: 32px;
                     }
                 }
 
@@ -1392,7 +1421,7 @@ body {
                     font-size: 11px;
                     line-height: 13px;
 
-                    color: #4A4A4A;                    
+                    color: #4A4A4A;
                 }
 
                 .grand-total {
@@ -1401,11 +1430,11 @@ body {
                     line-height: 19px;
 
                     color: #222222;
-                    
+
                     span {
                         font-weight: bold;
 
-                        color: #F16D7F;                        
+                        color: #F16D7F;
                     }
                 }
 
@@ -1435,7 +1464,7 @@ body {
 
                     &:hover {
                         background: #E05C6E;
-                    }                    
+                    }
                 }
             }
         }
@@ -1459,23 +1488,36 @@ body {
 
     &__form {
         max-width: 360px;
-        width: 30%;
-        > form  h5 {
+        width: 50%;
+
+        >form h5 {
             padding-bottom: 20px;
 
             font-weight: 300;
             font-size: 16px;
             line-height: 19px;
 
-            color: #222222;            
+            color: #222222;
         }
     }
 
     &__info {
         max-width: 652px;
-        width: 70%;
+        width: 50%;
     }
 
+    &__checkbox-group {
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+}
+
+.password-hint {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #B1B1B1;
 }
 
 .footer {
@@ -1536,39 +1578,6 @@ body {
     }
 }
 
-.cart-button {
-    padding: 6px 12px;
-
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-    img {
-        margin-right: 11px;
-    }
-}
-
-.white-button {
-    border: 1px solid #FFFFFF;
-}
-
-.brand-button {
-    padding: 10px 42px 10px 42px;
-
-    border: 1px solid $brandColor;
-
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: $brandColor;
-
-    @extend %transition;
-
-    >svg {
-        margin-right: 22px;
-    }
-}
-
 .brand-button:hover {
     color: #FFF;
     background-color: $brandColor;
@@ -1604,9 +1613,7 @@ body {
 }
 
 .checkbox-group {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    
+
     font-weight: 300;
     font-size: 11px;
     line-height: 13px;
@@ -1614,6 +1621,7 @@ body {
     label {
         margin-left: 10px;
     }
+
     .checkbox:not(:first-child) {
         margin-left: 20px;
     }

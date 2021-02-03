@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato;
+    font-style: normal;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.brand-button {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid $brandColor;
+    color: $brandColor;
+    cursor: pointer;
+    background: none;
+    outline: none;
+
+    &_tr {
+        @extend %transition;
+
+        &:hover {
+            color: #FFF;
+            background-color: $brandColor;
+        }
+    }
+}
