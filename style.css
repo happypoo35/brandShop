@@ -1590,8 +1590,6 @@ body {
 .registration {
   padding-top: 64px;
   padding-bottom: 96px;
-  padding-left: calc(50% - 570px);
-  padding-right: calc(50% - 570px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1602,8 +1600,6 @@ body {
 
 @media screen and (max-width: 1024px) {
   .registration {
-    padding-left: calc(50% - 368px);
-    padding-right: calc(50% - 368px);
     padding-top: 64px;
   }
 }
@@ -1648,19 +1644,29 @@ body {
 }
 
 .registration__info {
-  max-width: 652px;
   width: 50%;
-}
-
-.registration__info > h3 {
-  padding-bottom: 20px;
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
 }
 
+@media screen and (max-width: 1024px) {
+  .registration__info {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.registration__info > h3 {
+  padding-bottom: 20px;
+}
+
 .registration__info > p {
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .registration__info > ul > li {
