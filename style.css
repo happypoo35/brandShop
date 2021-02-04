@@ -1590,6 +1590,8 @@ body {
 .registration {
   padding-top: 64px;
   padding-bottom: 96px;
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1600,7 +1602,9 @@ body {
 
 @media screen and (max-width: 1024px) {
   .registration {
-    padding-top: 64px;
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+    padding-bottom: 64px;
   }
 }
 
@@ -1645,23 +1649,13 @@ body {
 
 .registration__info {
   width: 50%;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 29px;
-}
-
-@media screen and (max-width: 1024px) {
-  .registration__info {
-    padding-left: calc(50% - 368px);
-    padding-right: calc(50% - 368px);
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-  }
 }
 
 .registration__info > h3 {
   padding-bottom: 20px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .registration__info > p {
@@ -1680,10 +1674,17 @@ body {
   padding-right: 20px;
 }
 
-.registration__info > p, .registration__info > ul > li {
+.registration__info > h3, .registration__info > p, .registration__info > ul > li {
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
+}
+
+@media screen and (max-width: 1024px) {
+  .registration__info > h3, .registration__info > p, .registration__info > ul > li {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .registration__checkbox-group {

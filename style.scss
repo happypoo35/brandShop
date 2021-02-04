@@ -1485,12 +1485,11 @@ body {
     padding-top: 64px;
     padding-bottom: 96px;
 
-    //@include paddingBig();
+    @include paddingBig();
 
     @include tablet {
-        //@include padding16Tablet();
-
-        padding-top: 64px;
+        @include padding16Tablet();
+        padding-bottom: 64px;
     }
 
     display: flex;
@@ -1541,25 +1540,17 @@ body {
     &__info {
         width: 50%;
 
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 29px;
-
-        @include tablet {
-            @include padding16Tablet();
-            
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 19px;            
-        }
-
         > h3 {
             padding-bottom: 20px;
+
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
         }
 
         > p {
             padding-bottom: 20px;
-            width: 100%;
+            width: 100%;           
         }
 
         > ul > li {
@@ -1573,10 +1564,15 @@ body {
             }
         }
 
-        > p, > ul > li {
+        > h3, > p, > ul > li {
             font-weight: 300;
             font-size: 24px;
             line-height: 29px;            
+
+            @include tablet {
+                font-size: 16px;
+                line-height: 19px;
+            }            
         }
     }
 
