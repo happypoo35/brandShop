@@ -2,55 +2,6 @@
 @import 'global';
 
 
-@mixin padding16Tablet {
-    padding-left: calc(50% - 368px);
-    padding-right: calc(50% - 368px);
-}
-
-;
-
-@mixin padding32Tablet {
-    padding-left: calc(50% - 352px);
-    padding-right: calc(50% - 352px);
-}
-
-;
-
-@mixin paddingBig {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
-}
-
-;
-
-@mixin paddingMediumTablet {
-    padding-left: calc(50% - 680px);
-    padding-right: calc(50% - 665px);
-}
-
-;
-
-@mixin paddingMedium {
-    padding-left: calc(50% - 680px);
-    padding-right: calc(50% - 665px);
-}
-
-;
-
-@mixin paddingSmallTablet {
-    padding-left: calc(50% - 800px);
-    padding-right: calc(50% - 800px);
-}
-
-;
-
-@mixin paddingSmall {
-    padding-left: calc(50% - 800px);
-    padding-right: calc(50% - 800px);
-}
-
-;
-
 
 body {
     font-family: Lato;
@@ -61,19 +12,7 @@ body {
     overflow: hidden;
 }
 
-.center {
-    @include paddingBig();
-}
-
 .header {
-    @include paddingBig();
-
-    @include tablet {
-        @include padding32Tablet();
-    }
-
-    ;
-
     background-color: $darkColor;
     height: 75px;
     display: flex;
@@ -81,7 +20,6 @@ body {
     align-items: center;
 
     &-nav {
-        width: 100%;
         display: flex;
         justify-content: space-between;
 
@@ -145,7 +83,13 @@ body {
     min-height: 148px;
     position: relative;
     background: #F1E4E6;
-    display: flex;
+    display: flex;    
+
+    &_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &-img {
         width: 50%;
@@ -268,11 +212,6 @@ body {
     }
 
     &.small {
-        @include paddingBig();
-
-        @include tablet {
-            @include padding16Tablet();
-        }
 
         justify-content: space-between;
         align-items: center;
@@ -319,20 +258,9 @@ body {
     padding-bottom: 96px;
 
     @include tablet {
-        @include padding16Tablet();
         padding-top: 20px;
         padding-bottom: 154px;
     }
-
-    ;
-
-    @include paddingBig();
-
-    @include tablet {
-        @include padding16Tablet();
-    }
-
-    ;
 
     &-top {
         display: flex;
@@ -341,8 +269,6 @@ body {
         @include tablet {
             padding-bottom: 20px;
         }
-
-        ;
 
         img {
             width: 100%;
@@ -399,13 +325,9 @@ body {
 }
 
 .products {
-
     padding-bottom: 96px;
 
-    @include paddingBig();
-
     @include tablet {
-        @include padding16Tablet();
         padding-bottom: 64px;
     }
 
@@ -433,11 +355,24 @@ body {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include laptop {
+            justify-content: center;
+            column-gap: 30px;
+        }
+
+        @include tablet {
+            column-gap: 16px;
+        }
     }
 
     &-item {
-        margin-bottom: $itemsSpaces;
         padding-bottom: 20px;
+        margin-bottom: $itemsSpaces;
+
+        @include tablet {
+            margin-bottom: 16px;        
+        }
 
         background: #F8F8F8;
 
@@ -562,20 +497,16 @@ body {
     }
 
     &-footer {
-        @include paddingBig();
+        padding-top: 102px;
+        padding-bottom: 102px;
 
-        min-height: 341px;
+        @include tablet {
+            padding-top: 48px;
+        }
 
         background: $darkColor;
 
         &-items {
-
-            padding-top: 103px;
-
-            @include tablet {
-                padding-top: 48px;
-            }
-
             ul {
                 display: flex;
                 justify-content: space-between;
@@ -586,11 +517,6 @@ body {
                 }
 
                 li {
-
-                    @include tablet {
-                        padding-bottom: 64px;
-                    }
-
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -612,6 +538,12 @@ body {
 
                         width: 300px;
                     }
+                }
+
+                li:not(:last-child) {
+                    @include tablet {
+                        padding-bottom: 64px;
+                    }                    
                 }
             }
         }
@@ -910,14 +842,6 @@ body {
         background-color: #FFF;
         z-index: 1;
 
-        @include paddingBig();
-
-        @include tablet {
-            @include padding16Tablet();
-        }
-
-        ;
-
         &-filters {
             @extend .products-filters;
         }
@@ -1085,17 +1009,20 @@ body {
 }
 
 .subscribe {
-    @include paddingSmall();
-
-    display: flex;
-
-    @include tablet {
-        flex-direction: column;
+    &_container {
+        padding-top: 96px;
+        padding-bottom: 156px;
+        display: flex;
         align-items: center;
+        flex-wrap: wrap;
+
+        @include tablet {
+            padding-top: 56px;
+            padding-bottom: 140px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
-
-
-    min-height: 448px;
 
     background-image: url(articles/photo_subscribe.jpg);
     background-repeat: no-repeat;
@@ -1103,13 +1030,7 @@ body {
     background-size: cover;
 
     &-review {
-
-        padding-top: 97px;
         width: 50%;
-
-        @include tablet {
-            padding-top: 64px;
-        }
 
         display: flex;
         flex-direction: column;
@@ -1117,7 +1038,12 @@ body {
 
         p {
             padding-top: 30px;
-            max-width: 360px;
+
+            @include tablet {
+                margin-bottom: 48px;
+            }
+
+            width: Min(360px, 100%);
 
             font-weight: normal;
             font-size: 20px;
@@ -1129,14 +1055,6 @@ body {
     }
 
     &-form {
-        padding-top: 150px;
-
-        @include tablet {
-            padding-top: 48px;
-            padding-bottom: 140px;
-        }
-
-        width: 50%;
 
         display: flex;
         flex-direction: column;
@@ -1157,7 +1075,7 @@ body {
         }
 
         form {
-            padding-top: 32px;
+            margin-top: 32px;
             display: flex;
         }
 
@@ -1203,17 +1121,15 @@ body {
     padding-top: 96px;
     padding-bottom: 128px;
 
-    @include paddingBig();
-
     @include tablet {
-        @include padding16Tablet();
-
         padding-top: 64px;
     }
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    &_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
     .cart-items {
         width: 100%;
@@ -1353,7 +1269,7 @@ body {
 
         @include tablet {
             flex-direction: unset;
-            align-items: center;
+            //align-items: center;
             width: 100%;
             max-width: unset;
         }
@@ -1405,10 +1321,14 @@ body {
         .subtotal {
             padding: 44px;
 
+            height: fit-content;
+
             @include tablet {
                 width: 100%;
                 max-width: 360px;
                 margin-left: 16px;
+
+                margin-top: 39px;                
             }
 
             background-color: #F5F3F3;
@@ -1485,10 +1405,7 @@ body {
     padding-top: 64px;
     padding-bottom: 96px;
 
-    @include paddingBig();
-
     @include tablet {
-        @include padding16Tablet();
         padding-bottom: 64px;
     }
 
@@ -1597,20 +1514,17 @@ body {
 
 .footer {
 
-    &-copy-socials {
-        @include paddingBig();
-
-        @include tablet {
-            @include padding32Tablet();
-        }
-
-        height: 79px;
-
-        background: $darkColor;
+    &_container {
+        padding: 24px 0;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &-copy-socials {
+
+        background: $darkColor;
     }
 
     &-rights {
