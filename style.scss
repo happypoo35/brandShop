@@ -112,7 +112,7 @@ body {
                 height: 19px;
                 background: $brandColor;
 
-                box-sizing: border-box;
+                
                 padding-top: 2px;
 
                 font-weight: normal;
@@ -193,7 +193,7 @@ body {
         min-height: 763px;
         position: absolute;
         background: #FFFFFF;
-        box-sizing: border-box;
+        
         box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
         visibility: hidden;
         transition: .3s ease;
@@ -695,7 +695,7 @@ body {
         left: 0;
         width: 100%;
         padding-top: 13px;
-        box-sizing: border-box;
+        
         transition: .3s ease;
 
         .button {
@@ -824,7 +824,7 @@ body {
 
             overflow: hidden;
 
-            box-sizing: border-box;
+            
             max-height: 0;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
             background-color: #FFFFFF;
@@ -1047,7 +1047,7 @@ body {
     overflow: hidden;
     position: relative;
 
-    box-sizing: border-box;
+    
 
     &-prev,
     &-next {
@@ -1381,7 +1381,7 @@ body {
                 font-weight: 300;
                 border: 1px solid #A4A4A4;
                 outline: none;
-                box-sizing: border-box;
+                
             }
 
             .get-a-quote {
@@ -1412,7 +1412,7 @@ body {
             }
 
             background-color: #F5F3F3;
-            box-sizing: border-box;
+            
 
             .content {
 
@@ -1495,9 +1495,11 @@ body {
     display: flex;
     justify-content: space-between;
 
+
     &__form {
-        max-width: 360px;
-        width: 50%;
+        margin-right: 22px;
+
+        width: Min(360px, 100%);
 
         >form h5 {
             padding-bottom: 20px;
@@ -1538,7 +1540,7 @@ body {
     }
 
     &__info {
-        width: 50%;
+        width: Min(652px, 100%);
 
         > h3 {
             padding-bottom: 20px;

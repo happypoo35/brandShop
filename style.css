@@ -22,6 +22,8 @@ ul {
 *::after {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -136,8 +138,6 @@ body {
   width: 19px;
   height: 19px;
   background: #F16D7F;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding-top: 2px;
   font-weight: normal;
   font-size: 12px;
@@ -212,8 +212,6 @@ body {
   min-height: 763px;
   position: absolute;
   background: #FFFFFF;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
           box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
   visibility: hidden;
@@ -788,8 +786,6 @@ body {
   left: 0;
   width: 100%;
   padding-top: 13px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -917,8 +913,6 @@ body {
   left: -10px;
   top: 20px;
   overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   max-height: 0;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
@@ -1126,8 +1120,6 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .my-carousel-prev, .my-carousel-next {
@@ -1504,8 +1496,6 @@ body {
   font-weight: 300;
   border: 1px solid #A4A4A4;
   outline: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .shopping-cart .address-subtotal .form .get-a-quote {
@@ -1524,8 +1514,6 @@ body {
 .shopping-cart .address-subtotal .subtotal {
   padding: 44px;
   background-color: #F5F3F3;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1609,8 +1597,8 @@ body {
 }
 
 .registration__form {
-  max-width: 360px;
-  width: 50%;
+  margin-right: 22px;
+  width: Min(360px, 100%);
 }
 
 .registration__form > form h5 {
@@ -1648,7 +1636,7 @@ body {
 }
 
 .registration__info {
-  width: 50%;
+  width: Min(652px, 100%);
 }
 
 .registration__info > h3 {
