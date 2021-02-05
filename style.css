@@ -9,6 +9,42 @@
   padding: 0;
 }
 
+@-webkit-keyframes animate_fading {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate_fading {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -309,6 +345,10 @@ body {
   line-height: 29px;
   text-transform: uppercase;
   color: #F16D7F;
+  -webkit-animation: animate_fading 0.3s normal;
+          animation: animate_fading 0.3s normal;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .promo.small {

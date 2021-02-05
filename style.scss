@@ -209,6 +209,9 @@ body {
         text-transform: uppercase;
 
         color: $brandColor;
+
+        animation: animate_fading 0.3s normal;
+        animation-timing-function: ease;        
     }
 
     &.small {
