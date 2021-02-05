@@ -376,6 +376,14 @@ body {
 
         background: #F8F8F8;
 
+        &-img {
+            @extend %transition;            
+        }
+
+        &-img:hover {
+            transform: scale(1.01);
+        }
+
         &-img:hover &-overlay {
             @include overlay_hover();
         }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
-.brand-button_tr, .promo-overlay, .promo-breadcrumbs ul li a, .products-item-overlay, .products-item-cart, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .product-preview-cart__brand-button .cart-icon, .my-carousel-wrap, .subscribe-form-submit, .shopping-cart .cart-items .cart-buttons button, .shopping-cart .address-subtotal .form .get-a-quote, .shopping-cart .address-subtotal .subtotal .content .button, .registration__form__brand-button, .registration__form__brand-button-icon, .footer-socials-icon, .radio__text:after, .checkbox__text:after {
+.brand-button_tr, .promo-overlay, .promo-breadcrumbs ul li a, .products-item-img, .products-item-overlay, .products-item-cart, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .product-preview-cart__brand-button .cart-icon, .my-carousel-wrap, .subscribe-form-submit, .shopping-cart .cart-items .cart-buttons button, .shopping-cart .address-subtotal .form .get-a-quote, .shopping-cart .address-subtotal .subtotal .content .button, .registration__form__brand-button, .registration__form__brand-button-icon, .footer-socials-icon, .radio__text:after, .checkbox__text:after {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -501,6 +501,11 @@ body {
   .products-item {
     margin-bottom: 16px;
   }
+}
+
+.products-item-img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .products-item-img:hover .products-item-overlay {
