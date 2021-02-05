@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
-.brand-button_tr, .promo-overlay, .promo-breadcrumbs ul li a, .products-item-overlay, .products-item-cart, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .product-preview-cart__brand-button .cart-icon, .my-carousel-wrap, .subscribe-form-submit, .shopping-cart .cart-items .cart-buttons button, .shopping-cart .address-subtotal .form .get-a-quote, .shopping-cart .address-subtotal .subtotal .content .button, .registration__form__brand-button, .registration__form__brand-button-icon, .footer-socials-icon {
+.brand-button_tr, .promo-overlay, .promo-breadcrumbs ul li a, .products-item-overlay, .products-item-cart, .products-button a, .filter .filter-box .button, .filter .filter-box .button .ff-icon, .sort .dropdown .dropdown-content, .sort .dropdown.show .dropdown-content, .sort-icon, .product-preview-button:hover .product-preview-icon, .product-preview-cart__brand-button .cart-icon, .my-carousel-wrap, .subscribe-form-submit, .shopping-cart .cart-items .cart-buttons button, .shopping-cart .address-subtotal .form .get-a-quote, .shopping-cart .address-subtotal .subtotal .content .button, .registration__form__brand-button, .registration__form__brand-button-icon, .footer-socials-icon, .radio__text:after, .checkbox__text:after {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -1670,9 +1670,16 @@ body {
   }
 }
 
-.registration__checkbox-group {
+.registration__radio-group {
   margin-top: 12px;
   margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.registration__radio-group :not(:last-child) {
+  margin-right: 20px;
 }
 
 .password-hint {
@@ -1767,18 +1774,98 @@ body {
   color: #B1B1B1;
 }
 
-.checkbox-group {
+.radio-group {
   font-weight: 300;
   font-size: 11px;
   line-height: 13px;
 }
 
-.checkbox-group label {
-  vertical-align: top;
-  margin-left: 10px;
+.radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
 }
 
-.checkbox-group .checkbox:not(:first-child) {
-  margin-left: 20px;
+.radio__text {
+  position: relative;
+  padding: 0 0 0 24px;
+  cursor: pointer;
+}
+
+.radio__text:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #A4A4A4;
+  border-radius: 50%;
+  background: #FFF;
+}
+
+.radio__text:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #F16D7F;
+  opacity: 0;
+}
+
+input:checked + .radio__text:before {
+  border: 1px solid #F16D7F;
+}
+
+input:checked + .radio__text:after {
+  opacity: 1;
+}
+
+input:focus + .radio__text:before {
+  -webkit-box-shadow: 0px 0px 5px 0px #F16D7F;
+          box-shadow: 0px 0px 5px 0px #F16D7F;
+}
+
+.checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+
+.checkbox__text {
+  position: relative;
+  padding: 0 0 0 22px;
+  cursor: pointer;
+}
+
+.checkbox__text:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #EBEBEB;
+}
+
+.checkbox__text:after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f14a';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  color: #F16D7F;
+  opacity: 0;
+}
+
+input:checked + .checkbox__text:after {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

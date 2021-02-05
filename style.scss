@@ -1495,9 +1495,15 @@ body {
         }
     }
 
-    &__checkbox-group {
+    &__radio-group {
         margin-top: 12px;
         margin-bottom: 32px;
+
+        display: flex;
+
+        :not(:last-child) {
+            margin-right: 20px;
+        }
     }
 }
 
@@ -1586,18 +1592,115 @@ body {
     }
 }
 
-.checkbox-group {
+.radio-group {
 
     font-weight: 300;
     font-size: 11px;
     line-height: 13px;
 
-    label {
-        vertical-align: top;
-        margin-left: 10px;
+}
+
+.radio {
+
+    > input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 7px;
     }
 
-    .checkbox:not(:first-child) {
-        margin-left: 20px;
+    &__text {
+        position: relative;
+        padding: 0 0 0 24px;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #A4A4A4;
+            border-radius: 50%;
+            background: #FFF;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $brandColor;
+            opacity: 0;
+            
+            @extend %transition;
+            
+        }
+    }
+
+    input:checked + &__text:before {
+        border: 1px solid $brandColor;        
+    }
+
+    input:checked + &__text:after {
+	    opacity: 1;
+    }
+    input:focus + &__text:before {
+        box-shadow: 0px 0px 5px 0px #F16D7F;
     }
 }
+
+.checkbox {
+    input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 20px;
+    }
+
+    &__text {
+        position: relative;
+        padding: 0 0 0 22px;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #EBEBEB;
+        }
+
+        &:after {
+            font-family: "Font Awesome 5 Free";            
+            //content: '';
+            content: '\f14a';
+            position: absolute;
+            top: 1px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            color: $brandColor;        
+            opacity: 0;
+            @extend %transition;        
+        }
+    }
+
+    input:checked + &__text:after {
+        opacity: 1;
+    }
+
+    input:focus + &__text:before {
+        //border: 1px solid $brandColor;
+    }
+}
+
+
+
+
