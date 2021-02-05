@@ -74,7 +74,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: Min(1140px, 100%);
+  width: Min(1141px, 100%);
 }
 
 .pad {
@@ -82,10 +82,23 @@ body {
   padding-right: 32px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .pad {
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .pad {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .sm-hide {
+    display: none;
   }
 }
 
@@ -162,7 +175,13 @@ body {
 }
 
 .header-nav-right li:not(:last-child) {
-  margin-right: 33px;
+  margin-right: 32px;
+}
+
+@media screen and (max-width: 670px) {
+  .header-nav-right li:not(:last-child) {
+    margin-right: unset;
+  }
 }
 
 .header-nav-right .cart {
@@ -202,6 +221,27 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 670px) {
+  .promo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .promo_container {
@@ -223,6 +263,12 @@ body {
   display: flex;
 }
 
+@media screen and (max-width: 670px) {
+  .promo-img {
+    display: none;
+  }
+}
+
 .promo-img img {
   width: 100%;
 }
@@ -231,8 +277,13 @@ body {
   width: 50%;
 }
 
+@media screen and (max-width: 670px) {
+  .promo-text {
+    text-align: center;
+  }
+}
+
 .promo-content {
-  margin-top: 40%;
   border-left: 12px solid #F16D7F;
   padding-left: 16px;
 }
@@ -244,6 +295,20 @@ body {
   color: #222222;
 }
 
+@media screen and (max-width: 1023px) {
+  .promo-heading {
+    font-size: 44px;
+    line-height: 53px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .promo-heading {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+
 .promo-info {
   font-size: 32px;
   font-weight: bold;
@@ -252,6 +317,20 @@ body {
 
 .promo-info span {
   color: #F16D7F;
+}
+
+@media screen and (max-width: 1023px) {
+  .promo-info {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .promo-info {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .promo-menu {
@@ -394,7 +473,7 @@ body {
   padding-bottom: 96px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .sale {
     padding-top: 20px;
     padding-bottom: 154px;
@@ -408,7 +487,7 @@ body {
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .sale-top {
     padding-bottom: 20px;
   }
@@ -469,7 +548,7 @@ body {
   margin-right: 30px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .sale-item:not(:last-child) {
     margin-right: 20px;
   }
@@ -479,7 +558,7 @@ body {
   padding-bottom: 96px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .products {
     padding-bottom: 64px;
   }
@@ -514,7 +593,7 @@ body {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1141px) {
   .products-items {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -524,7 +603,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .products-items {
     -webkit-column-gap: 16px;
             column-gap: 16px;
@@ -537,7 +616,7 @@ body {
   background: #F8F8F8;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .products-item {
     margin-bottom: 16px;
   }
@@ -696,7 +775,7 @@ body {
   background: #222222;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .products-footer {
     padding-top: 48px;
   }
@@ -711,7 +790,7 @@ body {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .products-footer-items ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -753,7 +832,7 @@ body {
   width: 300px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .products-footer-items ul li:not(:last-child) {
     padding-bottom: 64px;
   }
@@ -1229,7 +1308,7 @@ body {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .subscribe_container {
     padding-top: 56px;
     padding-bottom: 140px;
@@ -1267,7 +1346,7 @@ body {
   color: #222222;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .subscribe-review p {
     margin-bottom: 48px;
   }
@@ -1341,7 +1420,7 @@ body {
   padding-bottom: 128px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .shopping-cart {
     padding-top: 64px;
   }
@@ -1363,7 +1442,7 @@ body {
   max-width: 652px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .shopping-cart .cart-items {
     max-width: unset;
     margin-bottom: 64px;
@@ -1500,7 +1579,7 @@ body {
           flex-direction: column;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .shopping-cart .address-subtotal {
     -webkit-box-orient: unset;
     -webkit-box-direction: unset;
@@ -1559,7 +1638,7 @@ body {
   background-color: #F5F3F3;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .shopping-cart .address-subtotal .subtotal {
     width: 100%;
     max-width: 360px;
@@ -1630,7 +1709,7 @@ body {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .registration {
     padding-bottom: 64px;
   }
@@ -1708,7 +1787,7 @@ body {
   line-height: 29px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .registration__info > h3, .registration__info > p, .registration__info > ul > li {
     font-size: 16px;
     line-height: 19px;

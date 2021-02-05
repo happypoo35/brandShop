@@ -7,9 +7,9 @@ $darkColor: #222222;
 
 $itemsSpaces: 30px;
 
-$laptop: 1140px;
-$tablet: 1024px;
-$mobile: 610px;
+$laptop: 1141px;
+$tablet: 1023px;
+$mobile: 670px;
 
 @mixin laptop {
     @media screen and (max-width: $laptop) {

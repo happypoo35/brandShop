@@ -34,7 +34,11 @@ body {
         }
 
         &-right li:not(:last-child) {
-            margin-right: 33px;
+           margin-right: 32px;
+
+            @include mobile {
+                margin-right: unset;
+            }           
         }
 
         &-right .cart {
@@ -61,7 +65,6 @@ body {
                 color: #FFFFFF;
             }
         }
-
     }
 
     &-dropdown {
@@ -84,6 +87,14 @@ body {
     position: relative;
     background: #F1E4E6;
     display: flex;    
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;      
+        justify-content: center;  
+    }
 
     &_container {
         display: flex;
@@ -92,8 +103,13 @@ body {
     }
 
     &-img {
+        //flex-grow: 1;
         width: 50%;
         display: flex;
+
+        @include mobile {
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -101,11 +117,14 @@ body {
     }
 
     &-text {
+        //flex-grow: 1;
         width: 50%;
+        @include mobile {
+            text-align: center;
+        }        
     }
 
     &-content {
-        margin-top: 40%;
         border-left: 12px solid $brandColor;
         padding-left: 16px;
     }
@@ -115,6 +134,16 @@ body {
         font-size: 48px;
         line-height: 58px;
         color: $darkColor;
+
+        @include tablet {
+            font-size: 44px;
+            line-height: 53px;            
+        }
+
+        @include mobile {
+            font-size: 38px;
+            line-height: 46px;            
+        }
     }
 
     &-info {
@@ -125,6 +154,16 @@ body {
         span {
             color: $brandColor;
         }
+
+        @include tablet {
+            font-size: 24px;
+            line-height: 29px;            
+        }
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 24px;           
+        }        
     }
 
     &-menu {

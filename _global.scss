@@ -30,6 +30,17 @@ body {
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    @include mobile {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.sm-hide {
+    @include mobile {
+        display: none;
+    }
 }
 
 a {
